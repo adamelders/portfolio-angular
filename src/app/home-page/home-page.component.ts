@@ -6,7 +6,15 @@ import {
   transition,
   animate,
 } from '@angular/animations';
-import { ChevronDown, ChevronUp, LucideAngularModule } from 'lucide-angular';
+import {
+  ChevronDown,
+  FileText,
+  GitBranch,
+  Github,
+  Linkedin,
+  LucideAngularModule,
+  Mail,
+} from 'lucide-angular';
 import { CommonModule, NgClass } from '@angular/common';
 
 @Component({
@@ -24,6 +32,10 @@ import { CommonModule, NgClass } from '@angular/common';
 })
 export class HomePageComponent {
   readonly ChevronDown = ChevronDown;
-  readonly ChevronUp = ChevronUp;
+  readonly LinkedIn = Linkedin;
+  readonly Github = Github;
+  readonly GitBranch = GitBranch;
+  readonly FileText = FileText;
+  readonly Mail = Mail;
   isCollapsed = true;
 }

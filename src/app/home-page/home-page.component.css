@@ -6,3 +6,11 @@
 .icon-rotated {
   transform: rotate(180deg);
 }
+
+.list-unstyled > li > a {
+  display: flex;
+}
+
+.list-unstyled > li > a > span {
+  margin-left: 0.5rem;
+}
