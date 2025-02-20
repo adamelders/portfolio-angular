@@ -1,1 +1,98 @@
-<p>home-page works!</p>
+<div class="flex flex-col h-screen justify-between">
+  <header class="flex flex-row justify-end bg-neutral-700">
+    <nav class="navbar flex flex-col w-full">
+      @if (!isCollapsed) {
+        <div id="collapseBasic" [@collapseAnimation]>
+          <div class="grid grid-cols-7 w-full justify-items-center px-96">
+            <div class="col-span-5">
+              <h4 class="text-white">About</h4>
+              <p class="text-white">
+                Full-stack software engineer with experience using Angular 2+,
+                TypeScript, JavaScript, HTML and CSS. Salesforce backend
+                development with Apex and the nCino platform. Extensive
+                experience configuring Node environments and packages, and
+                developing CI and build processes for engineers.<br /><br />
+                Past experience developing Windows platform applications using
+                C#, .NET, and WPF. Passionate about front-end development, game
+                development, creating tooling and build environment solutions
+                for developers, learning new frameworks and languages, and
+                mentoring others.
+              </p>
+            </div>
+            <div class="col-span-2">
+              <h4 class="text-white">Links</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/adam-elders/"
+                    class="text-white !no-underline"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/adamelders"
+                    class="text-white !no-underline"
+                    target="_blank"
+                    >Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://app.assembla.com/profile/adam.elders"
+                    class="text-white !no-underline"
+                    target="_blank"
+                    >Assembla</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="files/adam-elders-resume.pdf"
+                    class="text-white !no-underline"
+                    target="_blank"
+                    >Resume</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="mailto:adam@adamelders.com"
+                    class="text-white !no-underline"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      }
+      <div class="flex flex-row w-full px-96 justify-between">
+        <a href="#" class="h-12 w-12"
+          ><img id="logo" src="../../assets/logo.png" alt="Adam Elders"
+        /></a>
+        <button
+          type="button"
+          class="!px-3 !pt-2 !rounded-md !bg-neutral-600 hover:!bg-violet-800 hover:!text-neutral-700"
+          (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed"
+          aria-controls="collapseBasic"
+        >
+          <lucide-icon
+            [img]="ChevronDown"
+            size="30"
+            class="icon text-white"
+            [ngClass]="{ 'icon-rotated': !isCollapsed }"
+          ></lucide-icon>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main
+    class="bg-gradient-to-br from-violet-900 to-blue-400 mb-auto h-full text-white"
+  >
+    Content and stuff goes here
+  </main>
+
+  <footer class="h-20 bg-neutral-700 text-neutral-50">Footer</footer>
+</div>

@@ -1,0 +1,8 @@
+.icon {
+  display: inline-block;
+  transition: transform 300ms ease;
+}
+
+.icon-rotated {
+  transform: rotate(180deg);
+}
